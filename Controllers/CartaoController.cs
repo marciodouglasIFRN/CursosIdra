@@ -11,16 +11,19 @@ namespace CursosIdra.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CursoController : ControllerBase
+    public class CartaoController : ControllerBase
     {
 
         [HttpGet]
         public IEnumerable<Modelo> Index()
         {
-            return Enumerable.Range(1, 5).Select(index => new Curso
+            return Enumerable.Range(1, 5).Select(index => new Cartao
             {
                 Id = index,
-                Nome = "Nome" + index
+                Titular = "Nome" + index,
+                Numero = "Nome" + index,
+                Vencimento = "Nome" + index,
+                CodigoVerificacao = "Nome" + index,
             })
             .ToArray();
         }
@@ -28,16 +31,14 @@ namespace CursosIdra.Controllers
         [HttpGet("{id:long}")]
         public Modelo Get(long Id)
         {
-            return Curso.Get(Id);
+            return Cartao.Get(Id);
         }
 
         [HttpPost]
-        public string Post()
+        public Cartao Post()
         {
-            Curso Curso = new Curso();
-            Curso.Nome = "Nome";
-            Curso.Salvar();
-            return "Curso Cadastrado";
+            Console.WriteLine("Hi popst!");
+            return new Cartao();
         }
         
     }

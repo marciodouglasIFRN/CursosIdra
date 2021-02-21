@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CursoComponent } from './curso/curso.component';
+import { CartaoComponent } from './cartao/cartao.component';
+import { CartaoFormComponent } from './cartao-form/cartao-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CursoComponent } from './curso/curso.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    CursoComponent
+    CursoComponent,
+    CartaoComponent,
+    CartaoFormComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,6 +33,7 @@ import { CursoComponent } from './curso/curso.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'curso', component: CursoComponent },
+      { path: 'cartao', component: CartaoComponent },
     ])
   ],
   providers: [],
