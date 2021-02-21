@@ -1,0 +1,21 @@
+<p>curso works!</p>
+
+<p>testo = {{ testo }}</p>
+<p *ngIf="!cursos"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="cursos">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>nome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of cursos">
+      <td>{{ curso.id }}</td>
+      <td>{{ curso.nome }}</td>
+      <td>Inscrever</td>
+    </tr>
+  </tbody>
+</table>
+
