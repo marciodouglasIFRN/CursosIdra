@@ -1,14 +1,22 @@
-<p>cartao-form works!</p>
-<form [formGroup]="profileForm">
-  
-  <label>
-    First Name:
-    <input type="text" formControlName="firstName">
-  </label>
-
-  <label>
-    Last Name:
-    <input type="text" formControlName="lastName">
-  </label>
-
-</form>
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="inputEmail4">Número</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Número">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Vencimetno</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Vencimetno">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="inputEmail4">Nome do Titular</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Nome do Titular">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">CVV</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="CVV">
+        </div>
+      </div>
+  </form>

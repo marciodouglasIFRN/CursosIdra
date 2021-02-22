@@ -6,9 +6,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CursoComponent } from './curso/curso.component';
 import { CartaoComponent } from './cartao/cartao.component';
 import { CartaoFormComponent } from './cartao-form/cartao-form.component';
@@ -17,22 +14,16 @@ import { CartaoFormComponent } from './cartao-form/cartao-form.component';
   declarations: [
     AppComponent,
     NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     CursoComponent,
     CartaoComponent,
-    CartaoFormComponent
+    CartaoFormComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'curso', component: CursoComponent },
+      { path: 'curso', component: CursoComponent, pathMatch: 'full' },
       { path: 'cartao', component: CartaoComponent },
     ])
   ],

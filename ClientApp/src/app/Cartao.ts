@@ -1,10 +1,10 @@
 export class Cartao {
 
     constructor(
-      public id: number,
-      public name: string,
-      public power: string,
-      public alterEgo?: string
+      public titular: string,
+      public numero: string,
+      public vencimento: string,
+      public codigoVerificacao: string
     ) {  }
   
   }

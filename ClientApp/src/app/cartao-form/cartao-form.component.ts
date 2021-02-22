@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cartao } from '../Cartao';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-cartao-form',
@@ -8,10 +7,12 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./cartao-form.component.css']
 })
 export class CartaoFormComponent{
-
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-  });
+  public form: FormGroup;
+  constructor() {
+    this.form = new FormBuilder().group({
+      name: '',
+      address: ''
+    });
+  }
 
 }

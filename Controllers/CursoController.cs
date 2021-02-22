@@ -15,14 +15,9 @@ namespace CursosIdra.Controllers
     {
 
         [HttpGet]
-        public IEnumerable<Modelo> Index()
+        public IEnumerable Index()
         {
-            return Enumerable.Range(1, 5).Select(index => new Curso
-            {
-                Id = index,
-                Nome = "Nome" + index
-            })
-            .ToArray();
+            return Curso.Todos() != null ? Curso.Todos().Values.ToArray() : new Curso[0];
         }
         
         [HttpGet("{id:long}")]

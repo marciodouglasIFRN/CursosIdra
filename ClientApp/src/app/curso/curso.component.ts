@@ -10,7 +10,8 @@ export class CursoComponent {
   public cursos: Curso[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Curso[]>(baseUrl + 'curso').subscribe(result => {
+    http.get<any[]>(baseUrl + 'curso').subscribe(result => {
+      console.log(result);
       this.cursos = result;
     }, error => console.error(error));
   }
